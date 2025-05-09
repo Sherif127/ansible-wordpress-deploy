@@ -1,4 +1,4 @@
-# 🚀 WordPress Deployment with Ansible (RedHat-based Systems)
+## 🚀 WordPress Deployment with Ansible (RedHat-based Systems)
 
 This project automates the deployment of a complete WordPress environment using Ansible on RedHat-based Linux systems (such as CentOS or RHEL). It installs and configures MariaDB, Apache, PHP, and WordPress seamlessly without any manual intervention.
 
@@ -67,7 +67,7 @@ Ensure the following are installed on your control node (your local machine):
 - PyMySQL (required by community.mysql collection):
 
 
-📚 Required Ansible Collection
+## 📚 Required Ansible Collection
 This project uses:
 
 - community.mysql
@@ -78,7 +78,7 @@ ansible-galaxy collection install community.mysql
 ```
 To install it manually (if needed):
 
-**👤 Author:**
+## **👤 Author:**
 
 Sherif Shaban
 Feel free to fork and contribute!# ansible-wordpress-auto-deploy

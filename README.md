@@ -89,15 +89,14 @@ Ensure the following are installed on your control node (your local machine):
 This project uses:
 
 - community.mysql
+- posix (for firewalld and semanage tasks)
 
 Install it with:
 ```bash
 ansible-galaxy collection install community.mysql
+ansible-galaxy collection install ansible.posix
 ```
-To install it manually (if needed):
 
 ## **👤 Author:**
 
 Sherif Shaban
-Feel free to fork and contribute!# ansible-wordpress-auto-deploy
-# ansible-wordpress-deploy

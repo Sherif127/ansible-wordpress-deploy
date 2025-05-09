@@ -1,6 +1,6 @@
 ## 🚀 WordPress Deployment with Ansible (RedHat-based Systems)
 
-This project automates the deployment of a complete WordPress environment using Ansible on RedHat-based Linux systems (such as CentOS or RHEL). It installs and configures MariaDB, Apache, PHP, and WordPress seamlessly without any manual intervention.
+This project automates the deployment of a full WordPress stack using Ansible on Red Hat-based Linux systems (such as CentOS or RHEL). It installs and configures MariaDB, Apache, PHP, and WordPress with minimal manual intervention, following Infrastructure-as-Code best practices.
 
 ## 📦 Project Structure
 
@@ -25,17 +25,19 @@ mywordpress_ansible/
 
 ## ⚙️ Features
 
-- 🔒 Secure MariaDB installation with root password setup
+- 🔒 Secures MariaDB root access and automates database/user creation for WordPress
 
-- 🧰 Automatic installation of Apache, PHP, and WordPress
+- ⚙️ Installs and configures Apache, PHP, and WordPress automatically
 
-- 🧱 Modular Ansible roles for better organization and reusability
+- 🧱 Uses modular Ansible roles for clean structure and easy maintenance
 
-- 🧑‍💻 Custom database and user creation for WordPress
+- 🔁 Supports changing Apache’s listening port (default changed to 88)
 
-- ✅ OS-specific logic (supports Red Hat-based systems only)
+- 🔐 Configures SELinux and firewalld to allow the new custom port
 
 - 📦 Handles Ansible collection dependencies
+
+- 🧑‍💻 Designed for Red Hat-based distributions only
 
 ## 🚀 How to Use
 
@@ -57,8 +59,24 @@ cd wordpress_ansible
 ansible-playbook -i inventory.ini mywebsite.yaml
 ```
 
-> This will automatically install dependencies, create the database, set up WordPress, and configure Apache.
+> This will
 
+- Install all dependencies (Apache, PHP, MariaDB)
+
+- Secure MariaDB and create WordPress DB/user
+
+- Download and configure WordPress
+
+- Change Apache port to 88
+
+- Update SELinux rules and open port 88 on the firewall
+
+- Start all services
+
+Make sure to access your WordPress site via:
+```
+http://<your-server-ip>:88
+```
 ## 📦 Prerequisites
 Ensure the following are installed on your control node (your local machine):
 

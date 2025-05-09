@@ -1,0 +1,9 @@
+- name: Deploying wordpress
+  hosts: all
+  become: true
+
+  roles:
+    - apache
+    - php
+    - mariadb
+    - wordpress
